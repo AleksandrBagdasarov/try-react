@@ -3,11 +3,11 @@ import {useDispatch, useSelector} from "react-redux";
 import {userActions} from "../../store/user";
 import axios from "axios";
 
-const SigninForm = () => {
+const SignUpForm = () => {
     const state = useSelector((state) => state.user)
     const dispatch = useDispatch();
 
-    const signIn = (event) => {
+    const signUp = (event) => {
         event.preventDefault();
         console.log("event.target.password", event.target.password.value)
         console.log("event.target.email", event.target.email.value)
@@ -39,9 +39,9 @@ const SigninForm = () => {
     return (
 
         <div className="container mt-5 form-control">
-            <form onSubmit={signIn}>
+            <form onSubmit={signUp}>
             <div className="text-center">
-                <h4>{state.error? state.errorMessage: "Sign in"}</h4>
+                <h4>{state.error? state.errorMessage: "Sign Up"}</h4>
             </div>
                 <div className="row">
                     <div className="col">
@@ -49,10 +49,10 @@ const SigninForm = () => {
                         <input name="password" type="password" className="form-control mr-auto mt-1" placeholder="Password"/>
                     </div>
                 </div>
-                    <button className="text-center form-control mt-3 mr-auto bg-info text-white">Sign in</button>
+                    <button className="text-center form-control mt-3 mr-auto bg-info text-white">Sign Up</button>
             </form>
         </div>
     )
 }
 
-export default SigninForm;
+export default SignUpForm;

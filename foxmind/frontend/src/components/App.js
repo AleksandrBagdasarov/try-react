@@ -3,7 +3,7 @@ import Header from "./layout/Header";
 import Dashboard from "./foxmind/LinksDashboard";
 import LinksForm from "./foxmind/LinksForm";
 import LoginForm from "./foxmind/Login";
-import SigninForm from "./foxmind/Signin";
+import SignUpForm from "./foxmind/Signup";
 import {useSelector} from "react-redux";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         if (state.loginClick) {
             return <LoginForm/>;
         } else if (state.signinClick) {
-            return <SigninForm/>;
+            return <SignUpForm/>;
         } else if (state.loggedIn) {
             return (
                 <>
@@ -23,7 +23,7 @@ function App() {
                 </>
             );
         } else {
-            return <SigninForm/>;
+            return <SignUpForm/>;
         }
     }
 

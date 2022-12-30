@@ -46,7 +46,7 @@ const Header = () => {
                     <button onClick={clickLogin} className="btn btn-light mr-sm-2">Login</button>
                 </li>
                 <li className="nav-item">
-                    <button onClick={clickSignin} className="btn btn-light mr-sm-2">Sign in</button>
+                    <button onClick={clickSignin} className="btn btn-light mr-sm-2">Sign Up</button>
                 </li>
             </ul>
         )
